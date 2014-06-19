@@ -1,0 +1,250 @@
+// IMPORTS
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+// RESETS
+*, *:before, *:after {
+	font-family: 'Raleway', sans-serif; 
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+html,body {height: 100%;}
+
+// ANIMAITON KEYFRAMES
+@-moz-keyframes blinker {0% { opacity: 1.0; } 50% { opacity: 0.0; } 100% { opacity: 1.0; }}
+@-webkit-keyframes blinker {0% { opacity: 1.0; } 50% { opacity: 0.0; } 100% { opacity: 1.0; }}
+@keyframes blinker {0% { opacity: 1.0; } 50% { opacity: 0.0; } 100% { opacity: 1.0; }}
+
+// Set font size for body
+body {
+  font-size: 62.5%;  /* equals 10px */
+}
+
+
+// Intro section -- <header>
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 100;
+	@media (max-width: 767px) {position: relative;}
+	nav {
+		float: right;
+		padding-right: 1em;
+		a {
+			transition: 1s all ease;
+			display: inline-block;
+			font-size: 1.5em;
+			color: white;
+			font-family: raleway, sans-serif;
+			text-decoration: none;
+			text-transform: uppercase;
+			margin: .25em .25em;
+			padding: .5em .7em;
+			line-height: 1em;
+			border: 1px solid transparent;
+			border-radius: 1px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+.active {
+	// gives border to "active" links
+	border: 1px solid white;
+	background-color: rgba(255,255,255,.1)
+}
+
+/////////////////////
+// Section Basics
+section {
+	background: $grey;
+	min-height: 100%;
+	color: white;
+	h2 {
+		z-index: 3;
+		font-size: 6em;
+		display: inline-block;
+		margin-left: 10%;
+		margin-top: 10%;
+		font-family: 'PT Serif', sans-serif;
+	}
+	p {
+		
+		z-index: 3;
+		font-family: 'raleway', sans-serif;
+		font-size: 2em;
+		line-height: 1.2em;
+		padding: 2%;
+		margin-left: 10%;	
+		margin-right: 20%;
+		&:first-of-type {margin-top: 1em;}
+	}
+}
+
+// Technology Section -- <section id="technology">
+#intro {
+	height: 100%;
+	background-image: url($introimage);
+	background-size: cover;
+	background-position: 50% 50%;
+	@include darkness($squares);
+
+	.hero {
+	z-index: 8;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	@include vertical-align;
+	h1 {
+		position: relative;
+		color: white;
+		font-family: 'raleway', sans-serif;
+		font-weight: 600;
+		font-size: 6em;
+		text-transform: uppercase;
+		z-index: 9;
+		@media (max-width: 767px) {margin: 0;}
+		
+		&:after{ 
+			/* BLINKING "_" CHARACTER */
+			content: '_';
+			display: inline-block;
+			width: 0;
+			letter-spacing: 0;
+
+			-webkit-animation-name: blinker;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-timing-function: cubic-bezier(0.910.91.10.10);
+			-webkit-animation-iteration-count: infinite;
+
+			-moz-animation-name: blinker;
+			-moz-animation-duration: 1s;
+			-moz-animation-timing-function: cubic-bezier(0.9,0.9,.1,.1);
+			-moz-animation-iteration-count: infinite;
+
+			animation-name: blinker;
+			animation-duration: 1s;
+			animation-timing-function: cubic-bezier(0.9,0.9,.1,.1);
+			animation-iteration-count: infinite;
+			}
+		}
+
+	h2 {
+		position: relative;
+		z-index: 10;
+		text-align: center;
+		color: white;
+		display: inline-block;
+		margin: 0;
+		font-size: 2em;
+		font-family: 'PT Serif', serif;
+		margin: 0 1em;
+		a {
+			color: white;
+			text-decoration: none;}
+		}
+
+	}
+	.cta {
+		position: absolute;
+		bottom: 15%; left: 0; right: 0;
+		display: block;
+		text-align: center;
+		a {
+		transition: .25s all ease;
+		border-radius: .5em;
+		border: 1px solid white;
+		padding: .6em .8em;
+		display: inline-block;
+		font-family: 'raleway', sans-serif;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-weight: 400;
+		font-size: 2.0em;
+		color: white;
+		margin-left: .2em;
+		&:hover {color: black; background-color: white;}
+		}
+	}
+
+}
+#business {
+ 	//@include darkness($squares);
+ 	background-image: url($businessimage);
+	background-size: cover;
+	background-position: 50% 50%;
+	color: white;
+	h2 {}
+	q {
+		display: block;
+		padding-left: .5em;
+		line-height: 1.3em;
+		margin: 0 0 0 1em;
+		border-left: 7px white solid;
+		font-family: 'PT Serif', serif;
+		font-style: italic;
+		font-size: 1.5em;
+	}
+
+}
+
+// Technology Section -- <section id="technology">
+#technology {
+	@include darkness($squares);
+	background-image: url($technologyimage);
+	background-size: cover;
+	background-position: 50% 50%;
+	h2 {}
+	p {}
+}
+
+// Design Section -- <section id="design">
+#design {
+	background-image: url($designimage);
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 100%;
+	color: white;
+	h2 {}
+
+}
+
+// Projects Section -- <section id="projects">
+#projects {
+	@include darkness($squares);
+	background-image: url($projectsimage);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+// Contact Section -- <section id="contact">
+#contact {
+	background-image: url($contactimage);
+	background-size: cover;
+	background-position: 50% 50%;
+	position: relative;
+}
+
+// Guttter/Footer Section -- <footer>
+footer {
+	color: white;
+	font-family: 'raleway', sans-serif;
+	font-weight: 400;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 2em;
+	padding: 1% 10%;
+	text-shadow: 1px 1px 2px black;
+}

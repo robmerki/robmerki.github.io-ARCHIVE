@@ -1,0 +1,41 @@
+/////////////////////////
+// COLOURS ////////////// 
+/////////////////////////
+
+// MAIN COLOURS
+$green: #379e43;
+$blue: #5867e9;
+$grey: #242424;
+
+// CONTACTBOX COLOURS
+$linkedin: #156cab;
+$facebook: #3b5290;
+$twitter: #469aea;
+$medium: #48a055;
+$github: #262626;
+$email: #d03c3b;
+
+/////////////////////////
+// LISTS //////////////// 
+/////////////////////////
+
+// list of contactbox links + colours
+$contactlist: linkedin $linkedin, facebook $facebook, twitter $twitter, medium $medium, github $github, email $email;
+
+/////////////////////////
+// IMAGES /////////////// 
+/////////////////////////
+
+//pattern images
+$squares:"../img/squares.png";
+$lines:"../img/lines.png";
+$lines-r:"../img/lines-r.png";
+
+//section images
+$introimage: "../img/rails.jpg";
+$businessimage: "../img/business.jpg";
+$technologyimage: "../img/javascriptlol.jpg";
+$designimage: "../img/design.jpg";
+$projectsimage: "../img/projects.jpg";
+$contactimage: "../img/contact.jpg";
+
