@@ -55,6 +55,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/backup\/javascriptlol.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 203422,
+		"inputAbbreviatedPath": "\/img\/backup\/javascriptlol.jpg",
+		"outputAbbreviatedPath": "\/img\/backup\/javascriptlol.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/business.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

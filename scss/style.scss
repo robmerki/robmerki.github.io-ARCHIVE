@@ -83,10 +83,20 @@ section {
 		font-family: 'raleway', sans-serif;
 		font-size: 2em;
 		line-height: 1.2em;
-		padding: 2%;
-		margin-left: 10%;	
-		margin-right: 20%;
-		&:first-of-type {margin-top: 1em;}
+		padding: 1% 20% 1% 10%;	
+		&:first-of-type {margin-top: 2%;}
+	q{	
+		display: block;
+		padding-left: .5em;
+		line-height: 1.3em;
+		margin: 0 0 0 1em;
+		border-left: 7px white solid;
+		font-family: 'PT Serif', serif;
+		font-style: italic;
+		font-size: 1.5em;
+		font-weight: 700;
+		span {font-weight: 400; font-size: .9em;}
+		}
 	}
 }
 
@@ -184,22 +194,12 @@ section {
 	background-position: 50% 50%;
 	color: white;
 	h2 {}
-	q {
-		display: block;
-		padding-left: .5em;
-		line-height: 1.3em;
-		margin: 0 0 0 1em;
-		border-left: 7px white solid;
-		font-family: 'PT Serif', serif;
-		font-style: italic;
-		font-size: 1.5em;
-	}
+	q {}
 
 }
 
 // Technology Section -- <section id="technology">
 #technology {
-	@include darkness($squares);
 	background-image: url($technologyimage);
 	background-size: cover;
 	background-position: 50% 50%;
