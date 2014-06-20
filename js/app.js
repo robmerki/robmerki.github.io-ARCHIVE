@@ -31,16 +31,3 @@ $('a').on('click',function(e){
 
   $('html,body').stop().animate({scrollTop:$("section[id='" + i + "']").offset().top - 0});
 });
-
-
-
-//////////// Contact box
-//rolling over any of the buttons will animate the slide thing
-$( "#contactbox > ul > li > a" ).mouseover(function(){
-	$( this ).children(".bgroll").animate({width: '100%'},200);
-});
-
-//stops the animation on mouse roll out
-$( "#contactbox > ul > li > a" ).mouseleave(function(){
-	$( this ).children(".bgroll").stop(true).animate({width: '0%'},200);
-});
