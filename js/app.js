@@ -24,7 +24,7 @@ $('section')
    });
 
 ///////////// Smooth scroll to elements
-$('a').on('click',function(e){
+$('.scroll').on('click',function(e){
   e.preventDefault();
   var h = $(this).attr("href");
   var i = h.substring(1);

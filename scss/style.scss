@@ -116,7 +116,7 @@ section {
 // Technology Section -- <section id="technology">
 #intro {
 	height: 100%;
-	min-height: 500px;
+	min-height: 600px;
 	background-image: url($introimage);
 	background-size: cover;
 	background-position: 50% 50%;
@@ -175,7 +175,7 @@ section {
 		font-size: 2em;
 		font-family: 'PT Serif', serif;
 		margin: 0 1em;
-		@media (max-width: 767px) {margin-left: 0 !important;}
+		@media (max-width: 767px) {margin-left: 0 !important; margin-right: 0 !important;}
 
 		a {
 			color: white;
@@ -231,7 +231,7 @@ section {
 	background-image: url($designimage);
 	background-size: cover;
 	background-position: 50% 50%;
-	height: 100%;
+	min-height: 100%;
 	color: white;
 	h2 {}
 
@@ -290,9 +290,11 @@ section {
 #contact {
 	@include darkness($squares);
 	background-image: url($contactimage);
+	padding-bottom: 5em;
 	background-size: cover;
 	background-position: 50% 50%;
 	position: relative;
+	min-height: 100%;
 	p {margin-bottom: 4em;}
 	#contactbox {
 		padding: 0 20%;
