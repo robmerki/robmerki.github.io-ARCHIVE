@@ -6,7 +6,6 @@
 
 // RESETS
 *, *:before, *:after {
-	font-family: 'Raleway', sans-serif; 
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -70,15 +69,15 @@ section {
 	background: $grey;
 	min-height: 100%;
 	color: white;
+	padding: 10% 0 5% 0;
 	h2 {
 		z-index: 3;
 		font-size: 6em;
 		display: inline-block;
 		margin-left: 10%;
-		margin-top: 10%;
 		font-family: 'PT Serif', sans-serif;
 		@media screen and (max-width: 767px) {margin: 0; padding: .2em 0; text-align: center;
-		 width: 100%;}
+		width: 100%;}
 
 	}
 	p {
@@ -239,18 +238,76 @@ section {
 
 // Projects Section -- <section id="projects">
 #projects {
-	@include darkness($squares);
+	@include darkness($lines);
 	background-image: url($projectsimage);
 	background-size: cover;
 	background-position: 50% 50%;
+	
+	article {
+		padding-top: 2em;
+		width: 70%;
+		@media (max-width: 1100px) {width: 80%;}
+		@media (max-width: 767px) {width: 90%;}
+		margin: 0 auto;
+		overflow: auto;
+		figure {
+			width: 32%;
+			margin: 2em 0;
+			margin-left: .51515151515%;
+			display: inline-block;
+       		vertical-align: top;
+			padding: 0 2em;
+			&:last-of-type{margin-bottom: 5em;}
+			@media (max-width: 1100px) {
+				width: 49%; margin-left: 0;}
+			@media (max-width: 767px) {
+				width: 100%; margin-left: 0;}
+
+			}
+			img {
+				height: 128px;
+				display: block;
+				margin: 0 auto;
+				border-radius: 100%;
+				box-shadow: -5px 5px 5px rgba(0,0,0,0.2);
+			}
+			dt {
+				font-size: 2em;
+				font-family: 'raleway', sans-serif;
+				text-transform: uppercase;
+				margin: .3em 0;
+				text-align: center;}
+			dd {
+				font-size: 1.75em;
+				font-family: 'PT Serif', serif;
+				line-height: 1.3em;}
+		
+	}
 }
 
 // Contact Section -- <section id="contact">
 #contact {
+	@include darkness($squares);
 	background-image: url($contactimage);
 	background-size: cover;
 	background-position: 50% 50%;
 	position: relative;
+	p {margin-bottom: 1em;}
+	.contactbox {
+		padding: 0 30%;
+		overflow: auto;
+		a {
+			text-align: center;
+			display: block;
+			float: left;
+			width: 50%;
+			height: 4em;
+			margin: 1em 0;
+			font-size: 3em;
+			i {padding: 0 1em;}
+			color: red;
+		}
+	}
 }
 
 // Guttter/Footer Section -- <footer>
@@ -265,5 +322,4 @@ footer {
 	right: 0;
 	font-size: 2em;
 	padding: 1% 10%;
-	text-shadow: 1px 1px 2px black;
 }

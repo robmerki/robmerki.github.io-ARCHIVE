@@ -143,13 +143,90 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/projects.jpg": {
+	"\/img\/proj\/6cute.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 333374,
-		"inputAbbreviatedPath": "\/img\/projects.jpg",
-		"outputAbbreviatedPath": "\/img\/projects.jpg",
+		"initialSize": 9878,
+		"inputAbbreviatedPath": "\/img\/proj\/6cute.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/6cute.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/proj\/beaux.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7434,
+		"inputAbbreviatedPath": "\/img\/proj\/beaux.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/beaux.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/proj\/merki.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33054,
+		"inputAbbreviatedPath": "\/img\/proj\/merki.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/merki.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/proj\/mobify.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9536,
+		"inputAbbreviatedPath": "\/img\/proj\/mobify.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/mobify.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/proj\/nwhacks.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21209,
+		"inputAbbreviatedPath": "\/img\/proj\/nwhacks.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/nwhacks.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/proj\/projects.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 146419,
+		"inputAbbreviatedPath": "\/img\/proj\/projects.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/projects.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/proj\/slc.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9991,
+		"inputAbbreviatedPath": "\/img\/proj\/slc.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/slc.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/proj\/yukon.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27115,
+		"inputAbbreviatedPath": "\/img\/proj\/yukon.jpg",
+		"outputAbbreviatedPath": "\/img\/proj\/yukon.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
