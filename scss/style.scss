@@ -37,7 +37,7 @@ header {
 		float: right;
 		padding-right: 1em;
 		a {
-			transition: 1s all ease;
+			transition: .1s all ease;
 			display: inline-block;
 			font-size: 1.5em;
 			color: white;
@@ -316,7 +316,6 @@ section {
 			 
 				span{
 					background-color: rgba(lighten(nth($category, 2), 1%),1);
-					content: nth($category,3);
 					}
 				}
 			}
