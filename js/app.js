@@ -31,3 +31,4 @@ $('.scroll').on('click',function(e){
 
   $('html,body').stop().animate({scrollTop:$("section[id='" + i + "']").offset().top - 0});
 });
+

@@ -23,6 +23,8 @@ body {
   font-size: 62.5%;  /* equals 10px */
 }
 
+::-webkit-scrollbar {display: none;  /* hide ugly scrollbar */}
+
 .fullwidth {width: 100%;}
 
 // Intro section -- <header>
@@ -67,7 +69,9 @@ header {
 /////////////////////
 // Section Basics
 section {
+	transform: rotateZ(0);
 	background: $grey;
+	//background-attachment: fixed;
 	min-height: 100%;
 	color: white;
 	padding: 10% 0 5% 0;
@@ -91,6 +95,35 @@ section {
 		em {
 			font-weight: 700;
 			font-style: italic;
+		}
+		a {
+			color: white;
+			display: inline-block;
+			position: relative;
+			overflow: hidden;
+			text-decoration: none;
+			transform: translateY(7px);
+			
+			&:before {
+			z-index: -1;
+			display: inline-block;
+			content: "";
+			position: absolute;
+			height: 100%;
+			top: 92%; right: 0; left: 0;
+			background-color: white;
+			transition: .1s all;
+		}
+
+		//background-color: rgba(#7C8B92,1);
+		&:hover {
+			color: #24417D;
+			&:before {
+				position: absolute;
+				top: 0; right: 0; left: 0;
+			}
+			}
+		
 		}
 		&:first-of-type {margin-top: 2%;}
 		@media screen and (max-width: 767px) {
@@ -120,13 +153,13 @@ section {
 
 // Technology Section -- <section id="technology">
 #intro {
-	@include darkness(.3);
+	@include darkness( rgba(black,.0) ,rgba(black,.85));
 	height: 100%;
 	min-height: 600px;
 	padding: 0;
 	background-image: url($introimage);
 	background-size: cover;
-	background-position: 50% 50%;
+	background-position: 90% 100%;
 	
 	.hero {
 	z-index: 8;
@@ -136,19 +169,25 @@ section {
 	@include vertical-align;
 	h1 {
 		position: relative;
+		display: inline-block;
 		color: white;
 		font-family: 'raleway', sans-serif;
 		font-weight: 600;
 		font-size: 6em;
 		text-transform: uppercase;
 		z-index: 9;
-		@media (max-width: 767px) {margin: 0;}
+		@media (max-width: 767px) {
+			margin: 0;
+		}
+
 		
 		&:after{ 
 			/* BLINKING "_" CHARACTER */
-			content: '_';
+			content: '|';
+			font-weight: 100;
 			display: inline-block;
 			width: 0;
+			transform: translateY(-2.5px);
 			letter-spacing: 0;
 
 			-webkit-animation-name: blinker;
@@ -194,10 +233,13 @@ section {
 		bottom: 10%; left: 0; right: 0;
 		display: block;
 		text-align: center;
+		overflow: hidden;
+
 		a {
-		transition: .25s all ease;
+		position: relative;
+		transition: .15s all ease;
 		border-radius: 0;
-		border: 1px solid white;
+		border: 3px solid white;
 		padding: .6em .8em;
 		display: inline-block;
 		font-family: 'raleway', sans-serif;
@@ -207,14 +249,34 @@ section {
 		font-size: 2.0em;
 		color: white;
 		margin-left: .2em;
-		background-color: rgba(#0B1F34,.4);
-		&:hover {color: #1E2827; background-color: rgba(255,255,255,1);}
+		transition: .1s all;
+
+		
+		&:before {
+			z-index: -1;
+			display: inline-block;
+			content: "";
+			position: absolute;
+			height: 100%;
+			top: 100%; right: 0; left: 0;
+			background-color: white;
+			transition: .1s all;
+		}
+
+		//background-color: rgba(#7C8B92,1);
+		&:hover {
+			color: #3E3D3D;
+			&:before {
+				position: absolute;
+				top: 0; right: 0; left: 0;
+			}
+			}
 		}
 	}
 
 }
 #about {
- 	@include darkness(0.66);
+ 	@include darkness( rgba(black,.35) ,rgba(black,.15));
  	background-image: url($aboutimage);
 	background-size: cover;
 	background-position: 50% 50%;
@@ -248,7 +310,7 @@ section {
 
 // Portfolio Section -- <section id="Portfolio">
 #Portfolio {
-	@include darkness(0.5);
+	//@include darkness( rgba(black,.5) ,rgba(black,.5));
 	background-image: url($Portfolioimage);
 	background-size: cover;
 	background-position: 50% 50%;
@@ -260,45 +322,64 @@ section {
 		@media (max-width: 767px) {width: 90%;}
 		margin: 0 auto;
 		overflow: auto;
+
 		figure {
-			width: 32%;
+			transition: 1s all;
+			font-size: 10px;
+			position: relative;
+			width: 25%;
+			float: left;
+			vertical-align: top;
 			margin: 2em 0;
-			margin-left: .51515151515%;
-			display: inline-block;
-       		vertical-align: top;
 			padding: 0 2em;
-			&:last-of-type{margin-bottom: 5em;}
-			@media (max-width: 1100px) {
-				width: 49%; margin-left: 0;}
-			@media (max-width: 767px) {
-				width: 100%; margin-left: 0;}
+			@media (max-width: 1100px) {width: 33.33333333%;}
+			@media (max-width: 767px) {width: 50%;}
 
 			}
-			img {
-				height: 128px;
+			a {
 				display: block;
-				margin: 0 auto;
-				//border-radius: 100%;
-				box-shadow: -5px 5px 5px rgba(0,0,0,0.2);
+				background-size: cover;
+				background-position: 50%;
+				position: relative;
+				width: 100%;
+				height: 0;
+				padding-bottom: 100%;
+				box-shadow: -2px 2px 5px black;
+				transition: .2s all;
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0; right: 0; bottom: 0; left: 0;
+					transition: .2s all;
+					}
+				&:hover {
+					box-shadow: 0 0 0 black;
+					&:before {
+						background-color: rgba(black,0.45);
+					}
+				}
 			}
-			dt {
-				font-size: 2em;
-				font-family: 'raleway', sans-serif;
-				font-weight: 600;
-				text-transform: uppercase;
-				margin: .3em 0;
-				text-align: center;}
-			dd {
-				font-size: 1.75em;
-				font-family: 'PT Serif', serif;
-				line-height: 1.3em;}
+			.description {
+				display: none;
+				dt {
+					font-size: 2em;
+					font-family: 'raleway', sans-serif;
+					font-weight: 600;
+					text-transform: uppercase;
+					margin: .3em 0;
+					text-align: center;}
+				dd {
+					font-size: 1.75em;
+					font-family: 'PT Serif', serif;
+					line-height: 1.3em;}
+			}
 		
 	}
 }
 
 // Contact Section -- <section id="contact">
 #contact {
-	@include darkness(.4);
+	@include darkness( rgba(black,.4) ,rgba(black,.4));
 	background-image: url($contactimage);
 	padding-bottom: 5em;
 	background-size: cover;

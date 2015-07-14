@@ -7,17 +7,23 @@
 }
 
 // Classes for generic sections
-@mixin darkness($number) { 	
+@mixin darkness($from, $to) { 	
 	// "darkens" background image
 	position: relative;
 	z-index: 0;
 	&:before{
 	z-index: -1;
 	content: '';
-	background: rgba(0,0,0, $number );
 	position: absolute;
 	height: 100%; width: 100%;
 	top: 0; bottom: 0; right: 0; left: 0;
-	background-repeat: repeat;
+	@include gradient($from, $to);
 	}
+}
+
+//gradient mixin from https://gist.github.com/garyharan/957284
+@mixin gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from, $to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
 }
